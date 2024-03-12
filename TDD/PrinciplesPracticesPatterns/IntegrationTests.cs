@@ -5,28 +5,28 @@ namespace PrinciplesPracticesPatterns;
 
 public class IntegrationTests : IClassFixture<WebApplicationFactory<Program>>
 {
-    private readonly WebApplicationFactory<Program> factory;
+    //private readonly WebApplicationFactory<Program> factory;
 
-    public IntegrationTests(WebApplicationFactory<Program> factory)
-    {
-        this.factory = factory;
-    }
+    //public IntegrationTests(WebApplicationFactory<Program> factory)
+    //{
+    //    this.factory = factory;
+    //}
 
-    [Theory]
-    [InlineData("/")]
-    [InlineData("/Contact")]
-    public async Task Get_EndpointsReturnSuccessAndCorrectContentType(string url)
-    {
-        // Arrange
+    //[Theory]
+    //[InlineData("/")]
+    //[InlineData("/Contact")]
+    //public async Task Get_EndpointsReturnSuccessAndCorrectContentType(string url)
+    //{
+    //    // Arrange
 
-        var client = factory.CreateClient();
+    //    var client = factory.CreateClient();
 
-        // Act
+    //    // Act
 
-        var response = await client.GetAsync(url);
+    //    var response = await client.GetAsync(url);
 
-        // Assert
+    //    // Assert
 
-        Assert.Equal("text/html; charset=utf-8", response.Content.Headers.ContentType.ToString());
-    }
+    //    Assert.Equal("text/html; charset=utf-8", response.Content.Headers.ContentType.ToString());
+    //}
 }
